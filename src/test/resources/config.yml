@@ -1,0 +1,9 @@
+drivers:
+  chrome:
+    driver: 'src/test/resources/drivers/mac/chromedriver'
+
+web:
+  applications:
+    rukovoditel:
+      environments:
+        url: 'http://digitalnizena.cz/rukovoditel'
