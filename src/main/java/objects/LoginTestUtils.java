@@ -9,7 +9,10 @@ public class LoginTestUtils extends GlobalTestUtils {
     }
 
     public void loginUser(String user, String pass){
-        driver.get(BASE_URL);
+        if (!driver.getCurrentUrl().equals(BASE_URL)){
+           driver.get(BASE_URL);
+        }
+
         WebElement username = waitForElementName("username");
         username.sendKeys(user);
         WebElement password =waitForElementName("password");

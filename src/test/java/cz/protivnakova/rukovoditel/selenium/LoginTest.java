@@ -1,5 +1,6 @@
 package cz.protivnakova.rukovoditel.selenium;
 
+import objects.RukovoditelTestUtils;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -7,13 +8,13 @@ import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.JVM)
 public class LoginTest extends RukovoditelTest{
-    public static final String DASHBOARD_URL = "http://digitalnizena.cz/rukovoditel/index.php?module=dashboard/";
+    public static final String DASHBOARD_URL = RukovoditelTestUtils.BASE_URL + "/index.php?module=dashboard/";
     public static final String INVALID_PASSWORD = "invalidPassword";
 
     @Test
     public void loginWithValidCredentials(){
         //Given
-        //TODO come up with given
+        driver.get(RukovoditelTestUtils.BASE_URL);
 
         //When
         loginTestUtils.loginUser(USER, PASS);
@@ -25,7 +26,7 @@ public class LoginTest extends RukovoditelTest{
     @Test
     public void loginWithInvalidCredentials(){
         //Given
-        //TODO come up with given
+        driver.get(RukovoditelTestUtils.BASE_URL);
 
         //When
         loginTestUtils.loginUser(USER, INVALID_PASSWORD);
