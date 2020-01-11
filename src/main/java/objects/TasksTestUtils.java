@@ -10,7 +10,7 @@ public class TasksTestUtils extends GlobalTestUtils {
 
     public void deleteAllTasks() {
         //If there are any tasks delete them
-        if (!driver.findElementsByXPath("//table[@class='table table-striped table-bordered table-hover']/tbody//tr").isEmpty()){
+        if (!driver.findElementsByXPath("//table[@class='table table-striped table-bordered table-hover']/tbody//tr//td[contains(text(), 'No records found')]").isEmpty()){
             //Click select all
             waitForElementXPath("//div[@id='uniform-select_all_items']//input[@id='select_all_items']").click();
             //Delete all

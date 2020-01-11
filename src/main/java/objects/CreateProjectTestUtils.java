@@ -14,7 +14,7 @@ public class CreateProjectTestUtils extends GlobalTestUtils{
         waitForElementXPath("//div[@class='modal-footer']//button[@type='submit']").click();
     }
 
-    public void searchForProjectAndDelete(String name){
+    private void searchForProjectAndDelete(String name){
         waitForElementXPath("//table[@class='table table-striped table-bordered table-hover']/tbody//tr//td[@class='fieldtype_input  field-158-td item_heading_td']//a[contains(text(), '" + name + "')]//..//..//a//i[@class='fa fa-trash-o']").click();
     }
 

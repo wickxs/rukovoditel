@@ -33,7 +33,7 @@ public abstract class RukovoditelTest {
 
     @Before
     public void init() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/mac/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/win/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         loginTestUtils = new LoginTestUtils(driver);

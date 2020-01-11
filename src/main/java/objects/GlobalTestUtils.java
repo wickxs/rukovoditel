@@ -19,37 +19,37 @@ public class GlobalTestUtils extends RukovoditelTestUtils{
     public WebElement waitForElementXPath(String xPath){
         return  new WebDriverWait(driver, 3)
                 .until(ExpectedConditions
-                        .presenceOfElementLocated(By.xpath(xPath)));
+                        .visibilityOfElementLocated(By.xpath(xPath)));
     }
 
     public WebElement waitForElementName(String name){
         return  new WebDriverWait(driver, 3)
                 .until(ExpectedConditions
-                        .presenceOfElementLocated(By.name(name)));
+                        .visibilityOfElementLocated(By.name(name)));
     }
 
     public WebElement waitForElementClassName(String className){
         return  new WebDriverWait(driver, 3)
                 .until(ExpectedConditions
-                        .presenceOfElementLocated(By.className(className)));
+                        .visibilityOfElementLocated(By.className(className)));
     }
 
     public WebElement waitForElementId(String id){
         return  new WebDriverWait(driver, 3)
                 .until(ExpectedConditions
-                        .presenceOfElementLocated(By.id(id)));
+                        .visibilityOfElementLocated(By.id(id)));
     }
 
     public WebElement waitForElementTagName(String tag){
         return  new WebDriverWait(driver, 3)
                 .until(ExpectedConditions
-                        .presenceOfElementLocated(By.tagName(tag)));
+                        .visibilityOfElementLocated(By.tagName(tag)));
     }
 
     public List<WebElement> waitForElementsXPath(String xPath){
-        return  new WebDriverWait(driver, 3)
+        return new WebDriverWait(driver, 3)
                 .until(ExpectedConditions
-                        .presenceOfAllElementsLocatedBy(By.xpath(xPath)));
+                        .visibilityOfAllElementsLocatedBy(By.xpath(xPath)));
     }
 
     public void goToProjectsPage(){

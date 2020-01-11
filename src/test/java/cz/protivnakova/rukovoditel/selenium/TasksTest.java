@@ -6,13 +6,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 
@@ -76,7 +70,7 @@ public class TasksTest extends RukovoditelTest{
         globalTestUtils.waitForElementXPath("//div[@class='modal-body']//li[@class='search-choice']//span[contains(text(), 'Open')]//..//a").click();
         //Save filters
         globalTestUtils.waitForElementXPath("//div[@class='modal-footer']//button[@type='submit']").click();
-        //Check there are 3 rows filtered
+        //Check there are 2 rows filtered
         Assert.assertEquals(2, globalTestUtils.waitForElementsXPath("//table[@class='table table-striped table-bordered table-hover']//tbody//tr").size());
         //Remove filter
         globalTestUtils.waitForElementXPath("//div[@class='filters-preview-box is-active-1']//i[@class='fa fa-trash-o']").click();
