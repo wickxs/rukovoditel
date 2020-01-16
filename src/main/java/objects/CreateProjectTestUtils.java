@@ -10,7 +10,7 @@ public class CreateProjectTestUtils extends GlobalTestUtils{
     public void deleteCreatedProject(String projectName){
         removePreviousSearchIfPresent();
         searchForProjectAndDelete(projectName);
-        waitForElementXPath("//div[@id='uniform-delete_confirm']//input[@id='delete_confirm']").click();
+        waitForElementXPath("//div[@id='uniform-delete_confirm']").click();
         waitForElementXPath("//div[@class='modal-footer']//button[@type='submit']").click();
     }
 
