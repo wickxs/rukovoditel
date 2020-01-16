@@ -1,6 +1,7 @@
 package objects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -65,8 +66,10 @@ public class GlobalTestUtils extends RukovoditelTestUtils{
     }
 
     public void removePreviousSearchIfPresent() {
-        if (!driver.findElementsByXPath("//div[@class='note note-info search-notes']//span[@class='reset_search']").isEmpty()){
-            waitForElementXPath("//div[@class='note note-info search-notes']//span[@class='reset_search']").click();
+        WebElement search = waitForElementId("entity_items_listing66_21_search_keywords");
+        if (!search.getAttribute("value").isEmpty()){
+            search.clear();
+            search.sendKeys(Keys.ENTER);
         }
     }
 
